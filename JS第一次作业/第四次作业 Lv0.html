@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>建立对象</title>
+    <script>
+        //方法一
+        let obj = new Object()
+        obj.name = '史楚莹';
+        obj.age = 18;
+        obj.sex = '女';
+        obj.hobby = '摸鱼';
+        console.log(obj);
+
+        //方法二
+        let obje = {
+            name : '史楚莹',
+            age : 18,
+            sex : '女',
+            hobby : '摸鱼',
+        }
+        console.log(obje);
+
+        //方法三
+        function Me(){
+            this.name = '史楚莹';
+            this.age = 18;
+            this.sex = '女';
+            this.hobby = '摸鱼';
+        }
+        let m = new Me()
+        console.log(m);
+        
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

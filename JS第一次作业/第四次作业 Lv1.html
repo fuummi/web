@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lv1</title>
+    <script>
+        let obj = {
+            name: '张三',
+            age: 18,
+            sex: '男',
+        };
+        let copyObj = {};//建立一个空对象copyObj
+        function copy() { //建立一个copy函数          
+            for (let k in obj) {//遍历obj属性
+                copyObj[k] = obj[k];//把obj属性传到copyObj里
+            }
+            return copyObj
+        }
+        console.log(copyObj);
+
+        let obj1 = copy(obj);
+        let obj2 = copy(obj);
+        let obj3 = copy(obj);
+        let arr = [];
+        arr.push(obj1, obj2, obj3);
+        console.table(arr);
+    
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

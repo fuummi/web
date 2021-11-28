@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="uname">
+    <button onclick="showUname()">显示</button>
+    <div id="uname-show"></div>
+    <script>
+        function showUname() {
+            //获取 uname 的值
+            var uname = document.getElementById("uname");
+            var value = uname.value;
+            //2、将 uname 的值，构建成 h1 再放入到 uname-show 中
+            value = "<h1>" + value + "</h1>";
+            var unameShow = document.getElementById("uname-show");
+            unameShow.innerHTML = value;
+            
+            document.getElementById("uname-show").innerHTML = "<h1>" + document.getElementById("uname").value + "</h1>";
+        }
+    </script>
+</body>
+
+</html>

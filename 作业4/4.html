@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录界面</title>
+    <style>
+        *{
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: whitesmoke;
+            color: gray;
+        }
+        #boxboss{
+            width: 320px;
+            height: 430px;
+            margin: 0 auto;
+            margin-top: -215px;
+            background-color: white;
+            position: relative; 
+            top: 50%;         
+        }
+        a{
+            color: rgb(238, 192, 76);
+            text-decoration: none;
+        }
+        .a11{
+            color: gray;
+            text-decoration: none;
+            font-size: 11px;
+        }
+        .a12{
+            margin-left: 120px;
+            color: gray;
+            text-decoration: none;
+            font-size: 11px;
+        }
+        .box1{
+            font-size: 10px;
+            text-align:center;
+            height: 20px;
+        }
+        
+        .box2{
+            margin-top: 20px;
+            margin-left: 23px;
+            width: 270px;
+            height: 40px;
+        }
+        .box21{
+            margin-top: 20px;
+            margin-left: 23px;
+            width: 270px;
+            height: 40px;
+        }
+        .text{
+            width: 270px;
+            height: 40px;
+            text-indent: 50px;
+            font-size: 15px;
+            border-width: 1px;
+            background-image:url(img/86.png);
+            background-repeat: no-repeat;
+            background-position: 5px 3px;
+            background-size: 40px;
+        }
+        .box3{
+            height: 30px;
+            width: 300px;
+            text-align: right;
+            margin-top: 17px;
+            font-size: 13px;
+        }
+        .box4{
+            height: 10px;
+            margin-left: 25px;
+        }
+        .button{
+            width: 270px;
+            height: 35px;
+            background-color: gold;
+            border: none;
+            font-size: 15px;
+            font-weight: bold;
+            
+        }
+        .box5{
+            height: 20px;
+            margin-top: 55px;
+            font-size: 14px;
+            margin-left: 25px;
+        }
+        .box6{
+            height: 10px;
+            width: 260px;
+            margin-top: 25px;
+            font-size: 13px;
+            margin-left: 25px;
+            
+        }
+        .choice{
+            height: 12px;
+            width: 12px;   
+        }
+        .box7{
+            height: 10px;
+            width: 278px;
+            margin-top: 50px;
+            font-size: 12px;
+            margin-left: 20px;
+            text-align:center;
+        }
+        .box8{
+            width: 200px;
+            height: 20px;
+            margin-top: 20px;
+            margin-left: 45px;
+            text-align:center;
+        }
+        .line{
+            display:inline-block;
+            width: 78px;
+            border-top: 1px solid black;
+            vertical-align: -5px;
+        }
+        .pictuer{
+            height: 30px;
+            width: 30px;
+            margin-left: 30px;
+        }
+        .phone{
+            width: 15px;
+            height: 15px;
+            margin-top: 15px;
+        }
+        .password{
+            background-image:url(img/lock.jpg);
+            background-repeat: no-repeat;
+            background-position: 5px 7px;
+            background-size: 25px;
+            text-indent: 40px;
+            font-size: 15px;
+            border-width: 1px;
+        }
+
+</style>
+
+</head>
+<body>
+    <div id="boxboss">
+        <div class="box1">
+                <a href="#" class="a11">账号登录</a>
+                <a href="#" class="a12">手机动态码登录<img src="img/phone.jpg" class="phone"> </a>
+            </div> 
+            <div class="box2">
+                <input type="text" class="text" placeholder="手机号"/>
+            </div>
+            <div class="box21">
+                <input type="password" class="password" placeholder="密码"/>
+            </div>
+            <div class="box3">
+                <a href="#">忘记密码？</a>
+            </div>
+            <div class="box4">
+                <input type="button" class="button" value="登录"/>
+            </div>
+            <div class="box5">
+                还没有账号？<a href="#">免费注册</a>
+            </div>
+            <div class="box6">
+                <input type="radio" class="choice"> 
+                我已阅读并同意<a href="#">《美团用户协议》</a> <a href="#">《隐私政策》</a>，并授权美团使用该美团账号信息（如昵称、头像、收货地址）进行统一管理
+            </div>
+            <div class="box7">
+                <span class="line"></span> <span class="word">用合作网站账号登录</span><span class="line"></span>
+            </div>
+            <div class="box8">
+               <a href="#"><img src="img/1.jpg" class="pictuer"/></a>
+               <a href="#"><img src="img/2.jpg" class="pictuer"/></a>
+               <a href="#"><img src="img/3.jpg" class="pictuer"/></a>
+            </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const person = {
+            name: '露露姐姐',
+            age: 1000000,
+            address: {
+                city: 'ChongQing',
+                area: 'NanShan'
+            },
+            title: ['student', { year: 2021, title: 'GoodStudent' }]
+        }
+
+
+        // 你的代码
+        const { name } = person;
+        const { age: year } = person;
+        const { address: { city } } = person;
+        const { address: { area: mountain } } = person;
+        const { title: [title1, { title: title2 },title3='God'] } = person;
+
+        console.log(name) // 露露姐姐
+        console.log(year) // 1000000 这里没有写错哈，就是要输出1000000，结合课件
+        console.log(city) // ChongQing 
+        console.log(mountain) // NanShan //这里没有写错，就是要输出NanShan，结合课件
+        console.log(title1) // student
+        console.log(title2) // GoodStudent
+        console.log(title3) // God 结合课件
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

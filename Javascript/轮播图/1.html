@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>/</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    div {
+        position: relative;
+        padding: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: whitesmoke;
+        width: 1200px;
+        height: 600px;
+    }
+    img {
+        position: absolute;
+        width: 550px;
+        height: 300px;
+        
+    }
+    .img0 {
+        z-index: 0;
+        left: 50px;
+        top: 150px;
+    }
+    .img1 {
+        z-index: 1;
+        top: 150px;
+        right: 50px;
+    }
+    .img2 {
+        top: 120px;
+        z-index: 2;
+        left: 270px;
+        height: 360px;
+        width: 660px;
+    }
+    
+    .span1 {
+        position: absolute;
+        z-index: 4;
+        width: 50px;
+        font-size: 50px;
+        color: white;
+        background-color: grey;
+        border-radius: 50%;
+        cursor: pointer;
+        left: 0;
+        margin-top: 275px;
+    }
+   .span2 {
+        position: absolute;
+        z-index: 4;
+        width: 50px;
+        font-size: 50px;
+        color: white;
+        background-color: grey;
+        border-radius: 50%;
+        cursor: pointer;
+        right: 0;
+        margin-top: 275px;
+    }
+    .span3{
+        position: absolute;
+        display: block;
+        height: 20px;
+        width: 140px;
+        top:560px;
+        left:525px;
+    }
+    .dotAfter{
+        float: left;
+        display: block;
+        margin: 10px;
+        height: 22px;
+        width: 22px;
+        background-color: grey;
+        border-radius: 50%;
+    }
+    .dotBefore{
+        float: left;
+        display: block;
+        margin: 10px;
+        height: 20px;
+        width: 20px;
+        border: 2px solid grey;
+        border-radius: 50%;
+    }    
+</style>
+<body>
+    <div>
+        <span class="span1"> &lt </span>
+        <img src="./0.png" class="img0" title="0">
+        <img src="./1.png" class="img1" title="1">
+        <span class="span2"> &gt </span>
+        <img src="./2.png" class="img2" title="2">
+        <span class="span3">
+            <ul class="dotBefore"></ul>
+            <ul class="dotBefore"></ul>
+            <ul class="dotAfter"></ul>
+        </span>
+
+    </div>
+    <script>
+        let img = document.querySelectorAll('img')
+        let span1 = document.querySelector('.span1')
+        let span2 = document.querySelector('.span2')
+        let dot = document.querySelectorAll('ul')
+        let mid = 2;
+        let left = 0;
+        let right = 1
+        span1.onclick = function () {
+            if (mid == 0) { mid = 2 } else { mid-- }
+            if (left == 0) { left = 2 } else { left-- }
+            if (right == 0) { right = 2 } else { right-- }
+            dot[mid].className = 'dotAfter'
+            dot[left].className = 'dotBefore'
+            dot[right].className = 'dotBefore'
+            img[mid].className = 'img2'
+            img[left].className = 'img0'
+            img[right].className = 'img1'
+            img[left].style.transition = '0.6s';
+            img[right].style.transition = '0.6s';
+            img[mid].style.transition = '0.6s';           
+        }
+        span2.onclick = function () {
+            if (mid == 2) { mid = 0 } else { mid++ }
+            if (left == 2) { left = 0 } else { left++ }
+            if (right == 2) { right = 0 } else { right++ }
+            dot[mid].className = 'dotAfter'
+            dot[left].className = 'dotBefore'
+            dot[right].className = 'dotBefore'
+            img[mid].style.zIndex = '2'
+            img[mid].style.left = '325px'
+            img[mid].style.width = '660px'
+            img[mid].style.height = '360px'
+            img[mid].style.top='120px'
+            img[mid].style.left='270px'
+            img[left].style.zIndex = '0'
+            img[left].style.left = '50px'
+            img[right].style.zIndex = '1'
+            img[right].style.left = '600px'
+            img[right].style.width = '550px'
+            img[right].style.height = '300px'
+            img[right].style.top = '150px'
+            img[left].style.transition = '0.6s';
+            img[right].style.transition = '0.6s';
+            img[mid].style.transition = '0.6s';
+        }
+        // 代码有点多啊，但是我精简不了了（汗）
+    </script>
+</body>
+
+</html>

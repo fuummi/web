@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js练习</title>
+    <style>
+        #div1 {
+            width: 200px;
+            height: 100px;
+            background-color: lightskyblue;
+            border: 1px solid blue;
+            display: none;
+        }
+    </style>
+    <script>
+        var one = prompt('请输入第一个值');
+        var two = prompt('请输入第二个值');
+        var result = Number(one) + Number(two);
+        alert(您的结果是result);
+
+    </script>
+</head>
+
+<body>
+    <input type="checkbox" onmouseover="div1.style.display='block'" onmouseout="div1.style.display='none'" />
+    <div id="div1">为您的。。。。</div>
+</body>
+
+</html>

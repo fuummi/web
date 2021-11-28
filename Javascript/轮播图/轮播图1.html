@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;      
+            padding: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            background-color:whitesmoke;
+            height: 500px;
+            width: 1500px;
+        }
+        .img1{
+            position: relative;
+            top:90px;
+            width: 600px;
+            height: 300px;
+            
+        }
+        .img2{
+            position: relative;
+            z-index: 3;
+            left: -200px;
+            top:90px;
+            width: 600px;
+            height: 300px;
+        }
+        .img3{
+            position: relative;          
+            top:-223px;
+            left:860px;
+            width: 600px;
+            height: 300px;
+
+        }
+        .span1{           
+            position: relative;
+            z-index: 2;
+            font-size: 50px;
+            
+            color: white;
+            background-color:grey;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .span2{
+            position: relative;
+            top:-330px;
+            right:-860px;
+            z-index: 2;
+            font-size: 50px;
+            
+            color: white;
+            background-color:grey;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+       <span class="span1"><</span>
+       <img src="./1.png" class="img1">
+       <img src="./2.png" class="img2">   
+       <img src="./3.png" class="img3">
+       <span class="span2"> > </span>
+    </div>
+    <script>
+        let img=document.getElementsByTagName('img')
+        console.log(img);
+        //let img1=document.getElementsByClassName('img1')
+        //let img2=document.getElementsByClassName('img2')
+        //let img3=document.getElementsByClassName('img3')
+        let span1=document.getElementsByClassName('span1')
+        let span2=document.getElementsByClassName('span2')
+        
+        span1.onclick = function(){
+           
+           for(let i = 1;i<3;i++){
+               
+           }
+        }
+    </script>
+</body>
+
+</html>
+let mid=2;
+        let left=0;
+        let right=1
+        span1.onclick = function(){
+            mid--;//num：现在是第几张图片在最上层
+            mid=mid==-1?2:mid
+            if(left,right==0){left,right=2}else{left,right--}
+            console.log();
+        }

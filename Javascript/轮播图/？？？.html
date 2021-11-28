@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    div {
+        position: absolute;
+        padding: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: whitesmoke;
+        width: 1200px;
+        height: 600px;
+    }
+
+    img {
+        width: 550px;
+        height: 300px;
+        margin: 0;
+    }
+    .img0{
+        margin-top: 150px;
+    }
+    .img1{
+        margin-top: 150px;
+    }
+    .img2{
+        position: relative;
+        z-index: 2;
+        left: 265px;
+        top:-335px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+    }
+    span {
+        font-size: 50px;
+        color: white;
+        background-color: grey;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .span1{
+        float: left;
+        margin-top: 275px;
+    }
+    .span2{
+        float: right;
+        margin-top: 275px;
+    }
+</style>
+
+<body>
+    <div>
+        <span class="span1"> < </span>
+        <img src="./0.png" class="img0" title="0">
+        <img src="./1.png" class="img1" title="1">
+        <span class="span2"> > </span>
+        <img src="./2.png" class="img2" title="2">
+    <script>
+        let img=document.querySelectorAll('img')
+        let span1=document.querySelector('.span1')
+        let span2=document.querySelector('.span2')
+        let mid=2;
+        let left=0;
+        let right=1
+        span1.onclick = function(){
+            if(mid==0){mid=2}else{mid--}
+            if(left==0){left=2}else{left--}
+            if(right==0){right=2}else{right--}
+            console.log(left,mid,right);
+            img[2].src="./"+mid+".png"
+            img[0].src="./"+left+".png"
+            img[1].src="./"+right+".png"           
+        }
+        span2.onclick = function(){
+            if(mid==2){mid=0}else{mid++}
+            if(left==2){left=0}else{left++}
+            if(right==2){right=0}else{right++}
+            console.log(left,mid,right);
+            img[2].src="./"+mid+".png"
+            img[0].src="./"+left+".png"
+            img[1].src="./"+right+".png"
+        }
+        img[2].style.height = "360px";
+            img[2].style.width = "660px";
+    </script>
+    </div>
+</body>
+
+</html>

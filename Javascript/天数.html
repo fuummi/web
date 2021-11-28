@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function backDay(year) {
+            var day=28
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+                day=29
+            }
+            return '这一年的二月有'+day+'天'
+        }
+        alert(backDay(parseFloat(prompt('请输入年份'))));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

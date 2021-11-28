@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /*盒子的宽度是由内边距加边框组成的*/
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        label {
+            position: relative;
+            width: 160px;
+            height: 80px;
+            cursor: pointer;
+            /*cursor规则是设定网页浏览时用户鼠标指针的样式，也就是鼠标的图形形状
+            cursor：pointer设定鼠标的形状为一只伸出食指的手，这也是绝大多数浏览器里面鼠标停留在网页链接上方时候的样式
+            另外可以选择其他鼠标指针样式，常用的有default 箭头，crosshair 十字，progress 箭头和沙漏等等*/
+        }
+
+        label span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            border-radius: 80px;
+            transition: 0.5s;
+            box-shadow: 0 15px 25px #fe000066;
+        }
+
+        label input {
+            position: relative;
+            z-index: 1;
+            /*属性指定一个元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。由数字大小决定*/
+            appearance: none;
+        }
+
+        label input:checked~span {
+            /*当input选中时，span怎么怎么样*/
+            background-color: #05be05;
+            box-shadow: 0 15px 25px #05be0566;
+        }
+
+        label span i {
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 72px;
+            height: 72px;
+            background-color: #fff;
+            border-radius: 50%;
+            transition: 0.5s;
+        }
+
+        label input:checked~span i {
+            left: 84px;
+        }
+
+        label span i::before {
+            content: '';
+            position: absolute;
+            top: 22px;
+            left: 12px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: red;
+            box-shadow: 30px 0 0 red;
+            /*?怎么就两个了？？？*/
+            transition: 0.5s;
+        }
+
+        label input:checked~span i::before {
+            background-color: #05be05;
+            box-shadow: 30px 0 0 #05be05;
+        }
+
+        label span i::after {
+            content: '';
+            position: absolute;
+            bottom: 15px;
+            width: 30px;
+            height: 6px;
+            left:20px;
+            background-color: red;
+            transition: 0.5s;
+            border-radius: 6px;
+        }
+        label input:checked~span i::after{
+            background-color: #05be05;
+            border-radius: 0;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            height: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <label>
+        <input type="checkbox">
+        <span>
+            <i></i>
+            <!--定义与文本中其余部分不同的部分，并把这部分文本呈现为斜体文本。-->
+        </span>
+    </label>
+</body>
+
+</html>

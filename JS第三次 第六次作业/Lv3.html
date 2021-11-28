@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板</title>
+    <style>
+        div {
+            position: absolute;
+            left: 50%;
+            margin-left: -380px;
+        }
+
+        #box1 {
+            position: relative;
+            height: 100px;
+            width: 800px;
+            text-align: center;
+            background-color: aquamarine;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        #button {
+            position: relative;
+            margin-left: -20px;
+            margin-top: 20px;
+        }
+
+        #box2 {
+            position: relative;
+            height: 100px;
+            width: 800px;
+            margin-left: -20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span id="box1">
+            留言展示区
+        </span>
+        <div>
+            <textarea id="box2"></textarea>
+            <br />
+            <input type="button" value="发送" id="button">
+        </div>
+    </div>
+    <script>
+        let box1 = document.getElementById('box1')
+        let box2 = document.getElementById('box2')
+        let but = document.getElementById('button')
+        for (i = 0; i > 0; i++) {
+            button.onclick = function () {
+                let content=document.createElement('content')
+                content[i]=box2.value;
+                box1.innerHTML = content[i];
+            } 
+        }
+    </script>
+</body>
+
+</html>
