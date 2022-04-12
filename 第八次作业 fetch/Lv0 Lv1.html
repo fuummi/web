@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 400px;
+            width: 800px;
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+        textarea{
+            height: 100px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+        <textarea></textarea>
+        <button>点击发送请求</button>
+        <div></div>  
+    <script>
+        //Lv0
+        fetch('https://anonym.ink:8000/homework/get_homework', {
+            method: 'POST'
+        }).then(response => {
+            return response.text()
+        }).then(response => {
+            console.log(response);
+        })
+
+        //Lv1
+        let textarea = document.querySelector('textarea')
+        let btn = document.querySelector('button')
+        let div = document.querySelector('div')       
+        btn.onclick = function(){
+            let content = textarea.value
+            let formData = new FormData()
+            formData.append('message',content)
+            fetch('https://anonym.ink:8000/homework/fufubot_test/', {
+                method: 'POST',
+                body: formData,
+            }).then(response => {
+                return response.text()
+            }).then(response => {
+                div.innerText = response
+            })
+        }
+        //按了十几次才出现题目，我的脸这么黑吗(汗)        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+.font, .aa {
+  font-size: 30px;
+  color: cornflowerblue;
+}
+
+.aa {
+  width: 400px;
+  height: 500px;
+  background-color: #8ce9f0;
+  border-top: 3px solid #000;
+}
+
+.bb + p {
+  color: #000;
+}
+
+.bb ~ p {
+  font-weight: 700;
+}
+
+.dd, .ee {
+  border-width: 5px;
+  border-style: solid;
+  border-color: antiquewhite;
+  border-left: 10px solid #000;
+}
+
+.ee {
+  background-color: #fff;
+}
+
+.ff {
+  height: 300px;
+}
+
+.gg {
+  height: 50px;
+  background-color: #113;
+}
+
+/*普通注释*/

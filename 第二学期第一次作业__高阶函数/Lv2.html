@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" style="width: 500px;height: 20px;" placeholder='防抖' id="a">
+    <input type="text" style="width: 500px;height: 20px;" placeholder='节流' id="b">
+
+</body>
+<script>
+    //防抖
+    //设置一个定时器，当事件在定时周期内发生时，先清除正在执行的定时器，再重新设置另一个定时器，重复以上
+    let timer;
+    function fn1(fn, delay) {
+        return function () {
+            if (timer) {
+                clearTimeout(timer); //当前存在定时器，先清除
+            }
+            timer = setTimeout(() => {
+                fn.apply(this.argument); //执行函数
+                //timer = null;//输出值后要清除？
+            }, delay)
+        }
+
+    }
+    let input1 = document.querySelector('#a');
+    input1.addEventListener('keyup',
+        fn1(() => {
+            console.log(input1.value);
+        }, 500)
+    )
+
+    //节流
+    //限制一个函数在一定时间内只能执行一次
+    // 时间戳
+    // function fn2(fn, delay) {
+    //     let logTime = 0;
+    //     let firstTime = true;
+    //     return function () {
+    //         let nowTime = Date.now();
+    //         if(firstTime){
+    //             fn.apply(this.arguments);
+    //             nowTime = Date.now();
+    //             return firstTime = false;
+    //         }
+    //         if (nowTime - logTime > delay) { //如果时间间隔满足delay，执行函数并保存上一次键盘抬起的时间
+    //             fn.apply(this.arguments);
+    //             logTime = Date.now();
+    //         }
+    //     }
+    // }
+    //定时器
+    function fn2(fn, delay) {
+        let timer1 = null;
+        return function () {
+            if (timer1) { //keyup事件发生时，如果当前存在正在进行的定时器，把它清除
+                clearTimeout(timer1)
+            }
+            timer1 = setTimeout(() => {
+                fn.apply(this, arguments);
+                timer1 = null
+            }, delay)
+        }
+    }
+    let log = function () {
+        console.log(input2.value);
+    }
+    let input2 = document.querySelector('#b');
+    input2.addEventListener('keyup', fn2(log, 1000))
+</script>
+
+</html>

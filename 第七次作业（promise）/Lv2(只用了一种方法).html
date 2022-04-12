@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            display: block;
+            font-size: 20px;
+            text-align: center;
+        }
+        .hid{
+            width: 0;
+            height: 0;
+            font-size: 0;
+        }
+        .show{
+            font-size: 15px;
+            color:black;
+            width: 300px;
+            padding: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <span>《记承天寺夜游》</span>
+    <div class="hid">
+        元丰六年十月十二日夜，解衣欲睡，月色入户，欣然起行。
+        念无与为乐者，遂至承天寺寻张怀民。怀民亦未寝，
+        相与步于中庭。庭下如积水空明，水中藻、荇交横，盖竹柏影也。
+        何夜无月？何处无竹柏？但少闲人如吾两人者耳。
+    </div>
+    <div class="show"></div>
+    <script>
+        //把存文字的div(hid)隐藏
+        //设置显示内容的div(showBox)         
+        let div = document.querySelector('div');
+        let str = document.querySelector('.hid').innerText;
+        let showBox = document.querySelector('.show')
+        //console.log(str);
+        let index = 1;                              //文字序列号
+        setInterval(function () {                   //利用定时器执行函数
+            if (index > str.length) {
+                clearInterval();
+            } else {
+                let show = str.substring(0, index)  //设置函数通过substring读取文字
+                index++                             //用递增让每次读取的文字数加一
+                //console.log(show);
+                showBox.innerText = show            //把获取的字放入showBox
+            }           
+        }, 200)
+        //怎么用到迭代，promise，递归呢？
+    </script>
+</body>
+
+</html>

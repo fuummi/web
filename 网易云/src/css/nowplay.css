@@ -1,0 +1,55 @@
+/*现在播放列表*/
+.nowPlayList{
+    float: right;
+    margin-top: -650px;
+    width: 650px;
+    height: 650px;
+    background-color: #fff;
+    box-shadow: 2px 2px 6px grey;
+    overflow: scroll;
+    display: none;
+}
+.nowPlayTotal{
+    margin-left: 25px;
+    color: rgb(207, 207, 207);
+}
+.clearNowPlay{
+    float: right;
+    font-size: 20px;
+    margin-top: -25px;
+    margin-right: 20px;
+    color: rgb(80, 125, 175);
+}
+.NlistItem{
+    position: relative;
+    height: 45px;
+    line-height: 45px;
+    font-size: 20px;
+    background-color: rgb(249, 249, 249);
+}
+.Ntitle{
+    position: absolute;
+    left:5%;
+}
+.Nsinger{
+    position: absolute;
+    left:50%;
+}
+.Ntime{
+    position: absolute;
+    left:90%;
+}
+.NlistItem1{
+    background-color: #fff;
+}
+.NlistItem:hover{
+    background-color: rgb(244, 244, 244);
+}
+.red{
+    color: red;
+}
+a{
+    color: rgb(92, 133, 180);
+    text-decoration: none;
+}
+

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歌单</title>
+<script defer src="/dist/js/index.js"></script>
+<script defer src="/dist/js/nowplay.js"></script>
+<script defer src="/dist/js/play.js"></script>
+<script defer src="/dist/js/search.js"></script>
+<script defer src="/dist/js/songList.js"></script>
+<script defer src="/dist/js/test.js"></script>
+<script defer src="/dist/js/login.js"></script>
+</head>
+<body>
+    <!--顶部导航栏-->
+    <div class="nav">
+        <div class="navLeft">
+            <img src="/dist/images/logo.png" class="logo">
+            <div class="topBtn topBtn1">&lt</div>
+            <div class="topBtn topBtn2">&gt</div>
+            <input type="text" class="search">
+            <img src="/dist/images/mic.png" class="mic">
+        </div>
+        <div class="navRight">
+            <img class="header" src="/dist/images/head.png">
+            <span class="userName">未登录</span>
+            <img src="/dist/images/triangle.png" class="triangle">
+            <img src="/dist/images/vip.png">
+            <img src="/dist/images/icon_01.gif" class="icon icon1">
+            <img src="/dist/images/icon_02.gif" class="icon">
+            <img src="/dist/images/icon_03.gif" class="icon">
+            <img src="/dist/images/topline.gif">
+            <img src="/dist/images/icon_04.gif" class="icon">
+            <img src="/dist/images/icon_05.gif" class="icon">
+            <img src="/dist/images/icon_06.gif" class="icon">
+            <img src="/dist/images/icon_07.gif" class="icon">
+        </div>
+    </div>
+    <!--左侧导航栏-->
+    <div class="sidebar">
+        <div class="fir">发现音乐</div>
+        <ul>
+            <li><a href="#" class="Sec">播客</a></li>
+            <li><a href="#" class="Sec">视频</a></li>
+            <li><a href="#" class="Sec">关注</a></li>
+            <li><a href="#" class="Sec">直播</a></li>
+            <li><a href="#" class="Sec">私人FM</a></li>
+            <li class="thr">我的音乐</li>
+            <li class="fou"><img src="/dist/images/left1.png"><span>本地与下载</span></li>
+            <li class="fou"><img src="/dist/images/left2.png"><span>最近播放</span></li>
+            <li class="fou"><img src="/dist/images/left3.png"><span>我的音乐云盘</span></li>
+            <li class="fou"><img src="/dist/images/left4.png"><span>我的播客</span></li>
+            <li class="fou"><img src="/dist/images/left5.png"><span>我的收藏</span></li>
+            <li class="thr thr1" style="cursor: pointer;">创建的歌单<img src="/dist/images/zhankai.png" class="zhankai1"><img
+                    src="/dist/images/puls.png" style="margin-left:85px;cursor: pointer;"></li>
+            <span class="list1" style="display:none">
+                <li class="fou iLike">
+                    <img src="/dist/images/heart.png" style="margin-top: px;">
+                    我喜欢的音乐
+                    <div class="heart2"><img src="/dist/images/heart2.png"></div>
+                </li>
+                <li class="fou userListItem" id="remove"><img src="/dist/images/songlist.png"><span
+                        class="listname">废弃</span></li>
+            </span>
+            <li class="thr thr2" style="cursor: pointer;">收藏的歌单<img src="/dist/images/zhankai.png" class="zhankai2"></li>
+            <span class="list2" style="display:none">
+                <li class="fou userCollectItem" id="remove"><img src="/dist/images/songlist.png"><span
+                        class="listname">废弃</span></li>
+            </span>
+        </ul>
+    </div>
+    <!--登录板块-->
+    <div class="logInBlock">
+        <img src="/dist/images/loginbg1.png">
+        <img src="/dist/images/quite1.png" class="quite">
+        <input type="text" class="phone" placeholder="请输入手机号" value="">
+        <input type="password" class="password" placeholder="请输入密码" maxlength="35" value="">
+        <span class="rePassword">重设密码</span>
+        <img src="/dist/images/logchoice.png" class="logchoice">
+        <div class="logIn">登 录</div>
+        <div class="register">注册</div>
+        <div class="iconsCon">
+            <img src="/dist/images/icons_0.png" class="icons icons0">
+            <img src="/dist/images/icons_1.png" class="icons icons1">
+            <img src="/dist/images/icons_2.png" class="icons icons2">
+            <img src="/dist/images/icons_3.png" class="icons icons3">
+        </div>
+        <div class="agree">
+            <img src="/dist/images/readchoice.png" class="readchoice"> 同意
+            <a href="#">《服务条款》</a>
+            <a href="#">《隐私政策》</a>
+            <a href="#">《儿童隐私政策》</a>
+        </div>
+    </div>
+    <!--播放方块-->
+    <div class="play">
+        <img class="littleCover">
+        <div class="playTitle">歌名 <img src="/dist/images/heartbefore.png" class="heart"></div>
+        <div class="playSinger">歌手</div>
+        <div class="btns">
+            <img src="/dist/images/play0.png">
+            <img src="/dist/images/play1.png" class="preSong">
+            <img src="/dist/images/play2.png" class="playSong ">
+            <img src="/dist/images/play3.png" class="nextSong">
+            <img src="/dist/images/play4.png">
+        </div>
+        <div class="bottomIcons">
+            <img src="/dist/images/bottomicon_01.gif">
+            <img src="/dist/images/bottomicon_02.gif">
+            <img src="/dist/images/bottomicon_03.gif" class="volumBtn">
+            <img src="/dist/images/bottomicon_04.gif">
+            <img src="/dist/images/bottomicon_05.gif" class="nowBtn">
+        </div>
+        <span class="nowTime"></span>
+        <div class="runningGrey"></div>
+        <div class="running">
+            <div class="Pdot PdotAfter"></div>
+        </div>
+        <span class="totalTime"></span>
+        <audio class="audio"> </audio>
+        <div class="volum">
+            <div class="l"></div>
+            <div class="d"></div>
+        </div>
+        <div class="nowPlayList">
+            <div style="margin: 20px; font-size: 29px;font-weight: 900;color: rgb(55, 55, 55);">当前播放</div>
+            <div class="nowPlayTotal">总111首</div>
+            <div class="clearNowPlay">清空列表</div>
+            <div class="NlistItem" id="remove">
+                <span class="Ntitle" >标题</span>
+                <span class="Nsinger" >歌手</span>
+                <span class="Ntime" >时间</span>
+            </div>
+            <div class="NlistItem NlistItem1" id="remove">
+                <span class="Ntitle" >标题</span>
+                <span class="Nsinger" >歌手</span>
+                <span class="Ntime" >时间</span>
+            </div>
+        </div>
+    </div>
+    <!--歌单信息-->
+    <div style="position: relative; margin-left: 300px; margin-top: 90px;">
+        <img class="songCover">
+        <div class="master" style="width: 75%;">
+            <div style="font-size: 28px;font-weight: 800;" class="listName"><img src="/dist/images/songlisticon.png"></div>
+            <img style="width: 30px;border-radius: 50%;" class="creatorAvatar">
+            <a href="#" class="creator">用户名</a>
+            <span class="date">创建日期</span>
+            <div class="playAll"><img src="/dist/images/playicon.png"> 播放全部 <img src="/dist/images/plusicon.png"></div>
+            <div class="btn1 btnn"><img src="/dist/images/collecticon.png"> 收藏</div>
+            <div class="btn2 btnn"><img src="/dist/images/shareicon.png"> 分享</div>
+            <div class="btn3 btnn"><img src="/dist/images/downloadicon.png"> 下载全部</div>
+            <div class="sta" style="width: 75%;">
+                <p class="tag ">标签:</p>
+                <p class="count">歌曲: 播放:</p>
+                <p class="state">简介:</p>
+            </div>
+        </div>
+        <div class="change">
+            <span class="switchAfter listSwitch">歌曲列表</span>
+            <span class="switchBefore commentSwitch">评论</span>
+            <span class="switchBefore">收藏者</span>
+            <input type="text" class="search1" placeholder="搜索歌单音乐">
+        </div>
+    </div>
+    <!--歌单主体-->
+    <div class="top1">
+        <div class="listHeader">
+            <div class="listHeader1" style="width: 7%;text-align: right;padding-right: 40px;">操作</div>
+            <div class="listHeader1" style="width: 37%;">标题</div>
+            <div class="listHeader1" style="width: 18%;">歌手</div>
+            <div class="listHeader1" style="width: 25%;">专辑</div>
+            <div class="listHeader1" style="width: 10%;">时间</div>
+        </div>
+        <div class="list">
+            <div class="listItem" id="remove">
+                <div class="num"></div>
+                <div class="title mes" style="left:9%;">标题</div>
+                <div class="singer mes" style="left: 46%;">歌手</div>
+                <div class="album mes" style="left:64%;">专辑</div>
+                <div class="time mes" style="left:89.1%;">时间</div>
+            </div>
+            <div class="listItem listItem1" id="remove">
+                <div class="num"></div>
+                <div class="title mes" style="left:9%;">标题</div>
+                <div class="singer mes" style="left: 46%;">歌手</div>
+                <div class="album mes" style="left:64%;">专辑</div>
+                <div class="time mes" style="left:89.1%;">时间</div>
+            </div>
+        </div>
+    </div>
+    <!--歌单评论-->
+    <div class="comment">
+        <div class="cNum"></div>
+        <div class="comments" style="height:auto">
+            <img class="Chead">
+            <div class="Ctext">
+                <div class="Cinner"> <a href="#"></a> <span class="inner"></span>
+                </div>
+                <p class="Ctime"></p>
+                <span class="CCright"><img src="/dist/images/good.png"> <span style="color: grey;"></span> <img
+                        src="/dist/images/good2.png"></span>
+            </div>
+        </div>
+    </div>
+    <!--热搜榜-->
+    <div class="hotSearch">
+        <p>热搜榜</p>
+        <div>
+            <span class="top3">1</span>
+            <span class="hotName">11</span>
+            <span class="hotNum">11</span>
+            <img class="hotIcon">
+            <p class="detile"></p>
+        </div>
+        <div>
+            <span class="top3">2</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+            <p class="detile"></p>
+        </div>
+        <div>
+            <span class="top3">3</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+            <p class="detile"></p>
+        </div>
+        <div>
+            <span class="not3">4</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+            <p class="detile"></p>
+        </div>
+        <div>
+            <span class="not3">5</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">6</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+            <p class="detile"></p>
+        </div>
+        <div>
+            <span class="not3">7</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+            <p class="detile"></p>
+        </div>
+        <div>
+            <span class="not3">8</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+            <p class="detile"></p>
+        </div>
+        <div>
+            <span class="not3">9</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+            <p class="detile"></p>
+        </div>
+        <div>
+            <span class="not3">10</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">11</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">12</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">13</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">14</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">15</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">16</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">17</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">18</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">19</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">20</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+    </div>
+
+</body>
+
+</html>

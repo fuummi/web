@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 1000px;
+            width: 1000px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="用户名" id="text" > <br>
+    <input type="password" placeholder="密码" id="pas" >
+    <button class="btn1">登录</button>
+    <button class="btn2">显示作业内容</button>
+    <div></div>
+    <script>
+        let text = document.querySelector('#text')
+        let pas = document.querySelector('#pas')
+        let btn1 = document.querySelector('.btn1')
+        let btn2 = document.querySelector('.btn2')
+        let div = document.querySelector('div')
+        let string=''
+        let token = ''
+        btn1.onclick = function () {
+            let json = {
+                'username': '' + text.value + '',                 //根据用户输入的用户名，密码创建一个json对象
+                'password': '' + pas.value + ''
+            }
+            fetch('https://anonym.ink:8000/homework/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(json)                          //传给后端的数据要字符串化
+            }).then((response) => {
+                return response.text()                              //取到后端发回数据的文本值    
+            }).then((response)=>{
+                string = response
+                let json1 = JSON.parse(string)                      //把字符串数据JSON化
+                token = json1.data                                  //从JSON里取出我们想要的token(key为data)
+                return token                                        //return token,用于下一个then
+                //return new Promise.resolve()
+            }).then(()=>{                                           //再开一个then，让token的存储发生在后端返回数据之后                
+                localStorage.setItem('token',token)                 //存储token localStorage满足重开浏览器无需再次登录的要求           
+            })         
+        } 
+        btn2.onclick = function(){
+        fetch('https://anonym.ink:8000/homework/auth/next_level', {
+            method: 'GET', 
+            headers: {
+                'Authorization' : 'BEARER '+localStorage.getItem('token')+''  //拿出token用于身份验证
+            },
+        }).then(response => {
+            return response.text()
+        }).then(response => {
+            div.innerText = response
+        })
+    }
+    </script>
+</body>
+
+</html>

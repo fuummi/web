@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let p = new Promise((resolve, reject) => {
+            //做一些异步操作
+            setTimeout(() => {
+                console.log("执行完成");
+                resolve("好耶");
+            }, 2000);
+        })
+            .then(
+                (data) => {
+                    console.log(data);
+                    return data;
+                    //此时输出data为resolve传入的参数
+                },
+                (error) => {
+                    console.log(error);
+                    //此时输出error为reject传入的参数
+                }
+            )
+            .then((data) => {
+                console.log(data);//2
+                return data;
+                //好耶
+            })
+            .then((data) => {
+                console.log(data);//3
+                return data;
+                //好耶
+            })
+            .then((data) => {
+                console.log(data);//4
+                //undefined
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let bar;
+        // 这个方法用的是一个异步签名，但其实它是同步方式调用回调的
+        function someAsyncApiCall(callback) {
+            callback();
+        }
+        // 回调函数在`someAsyncApiCall`完成之前被调用
+        someAsyncApiCall(() => {
+            // 由于`someAsyncApiCall`已经完成，bar没有被分配任何值
+            console.log('bar', bar); // undefined
+        });
+
+        bar = 1;
+    </script>
+</body>
+
+</html>

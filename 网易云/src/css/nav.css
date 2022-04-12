@@ -1,0 +1,388 @@
+*{ padding: 0; margin: 0; border: 0;} 
+body{
+    background-color: rgb(255, 255, 255);
+}
+/*顶部导航栏*/
+.nav{
+    position: fixed;
+    top:0px;
+    height: 90px;
+    width: 100%;
+    background-color: rgb(236, 65, 65);
+    z-index: 5;
+}
+.navLeft{
+    float: left;
+    /* margin-left:5px; 
+    
+    margin-top:10px; */
+}
+.logo{
+    float: left;
+    margin-left:20px; 
+    margin-top:20px;
+}
+.topBtn{
+    float: left;
+    width: 35px;
+    height: 35px;
+    margin-top:5px;
+    text-align: center;
+    font-size: 20px;
+    background-color: rgb(216, 59, 59);
+    color: rgb(247, 215, 215);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.topBtn1{
+    margin-left: 125px;
+}
+.topBtn2{
+    margin-left: 13px;
+}
+.search{
+    float: left;
+    height: 50px;
+    width: 240px;
+    margin-left: 20px;
+    outline: none;
+    border-radius: 25px 25px 25px 25px;
+    font-size: 15px;         
+    color: rgb(253, 240, 240);
+    background-color: rgb(225, 62, 62);
+    background-image:url(../images/search.png);
+    background-repeat: no-repeat;
+    background-position: 15px 12px;
+    background-size: 25px;
+    text-indent: 50px;
+}
+.mic{
+    float: left;
+    margin-left: 13px;
+    margin-top: 15px;
+}
+.navRight{
+    float: right;
+    margin-right:25px;
+    margin-top:25px;
+}
+.header{
+    float: left;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: -8px;
+    margin-right: 10px;
+    left:1170px;
+    cursor: pointer;
+}
+.userName{
+    float: left;
+    margin-right: 30px;
+    margin-top: 10px;
+    color:rgb(247, 197, 197);
+    cursor: pointer;  
+}
+.userName:hover{
+    color: #fff;
+}
+.icon:hover{
+    filter: brightness(150%);
+    cursor: pointer;
+}
+.icon1{
+    margin-left: 15px;
+}
+/*侧边栏*/
+.sidebar{
+    position: fixed;
+    z-index: 4;
+    width: 300px;
+    height: 80%;
+    background-color: #fff;
+    overflow:scroll;
+    border-right: solid 2px rgb(225, 225, 225);
+}
+.sidebar .fir{
+    width: 255px;
+    height: 40px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 900;
+    color: rgb(49, 49, 49);
+    background-color: rgb(246, 246, 247);
+}
+.sidebar .Sec{
+    display: block;
+    width: 255px;
+    margin: 6px;
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 23px;
+    font-weight: 400;
+    list-style: none;
+    text-decoration: none;
+    color:rgb(51, 51, 51)
+}
+.sidebar .Sec:hover{
+    background-color: rgb(246, 246, 247);;
+}
+.sidebar .thr{
+    display: block;
+    margin: 11px;
+    margin-left: 12px;
+    padding: 10px;
+    font-size: 18px;
+    color: rgb(153, 153, 153);
+}
+.sidebar .fou{
+    display: block;
+    width: 255px;
+    margin: 7px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    list-style: none;
+    text-decoration: none;
+    color:rgb(51, 51, 51);
+    cursor: pointer;
+    overflow: hidden;
+}
+.sidebar .fou:hover{
+    background-color: rgb(246, 246, 247);;
+}
+/* 定义滚动条样式 */
+::-webkit-scrollbar {
+    width: 10px;  
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+    background-color: rgb(224, 224, 225);
+    border-radius: 5px;
+}
+.heart2{
+    float: right;
+    margin-top:-30px;
+    width: 60px;
+    height: 30px;
+    margin-left: 40px;
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 15px 15px 15px 15px;
+    text-align: center;
+}
+.heart2:hover{
+    background-color: rgb(245, 245, 245);
+}
+.heart2:hover+.fou{
+    background-color: #fff;
+}
+/*页面切换*/
+.switch{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 50px;
+    top:90px;
+    left:305px;
+    font-size: 22px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+}
+.switchBefore{
+    margin: 12px;  
+    font-size: 24px;
+    color: rgb(55, 55, 55);
+}
+.switchBefore,.play :nth-child(2):hover{
+    color:rgb(0,0,0);
+    cursor: pointer;
+}
+.switchAfter{
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 29px;
+    font-weight: 900;
+    color: rgb(55, 55, 55);
+    border-bottom:5px solid rgb(216, 59, 59);
+}
+.switchAfter:hover{
+    color:rgb(0,0,0);
+    cursor: pointer;
+}
+
+/*底部播放*/
+.play{
+    position: relative;
+    display:block;
+    position:fixed;
+    z-index: 10;
+    bottom: 0%;
+    width: 100%;
+    height: 110px;
+    background-color: rgb(255, 255, 255);
+    border-top: solid 2px rgb(225, 225, 225);
+}
+.littleCover{
+    position: absolute;
+    margin: 16px;
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.playTitle{
+    position: absolute;
+    top:20px;
+    left:105px;
+    font-size: 25px;
+    color: rgb(51, 51, 51);
+}
+.playSinger{
+    position: absolute;
+    top:58px;
+    left:105px;
+    font-size: 18px;
+}
+.bottomIcons{
+    position: absolute;
+    top: 23px;
+    right: 20px;
+}
+.bottomIcons:hover{
+    cursor: pointer;
+}
+.btns{
+    position: absolute;
+    left:40%;
+    top:8px;
+}
+.btns img{
+    margin-right: 50px;
+    cursor: pointer;
+}
+/*播放条*/
+.running{
+    position: absolute;
+    z-index: 15;
+    top:80px;
+    left:50%;
+    margin-left: -280px;
+    width: 560px;
+    height: 5px;
+    background-color: rgb(205,205,205);
+    cursor: pointer;
+}
+.runningGrey{
+    position: absolute;
+    z-index: 16;
+    top:80px;
+    left:50%;
+    margin-left: -280px;
+    width: 0px;
+    height: 5px;
+    background-color: rgb(255, 78, 78);
+    cursor: pointer;
+}
+.Pdot{
+    position: absolute;
+    top:-6px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(255, 78, 78);
+    cursor: pointer;
+}
+.totalTime{
+    position: absolute;
+    top:70px;
+    left:66%;
+}
+.nowTime{
+    position: absolute;
+    top:70px;
+    left:33%;
+}
+/*音量调节*/
+.volum{
+    z-index: 14;
+    float:right;
+    width: 40px;
+    height: 130px;
+    margin-top: -110px;
+    margin-right: 155px;
+    background-color: #fff;
+    box-shadow: 2px 2px 6px grey;
+    display: none;
+}
+.l{
+    width: 7px;
+    height: 100px;
+    margin-left: 15px;
+    margin-top: 10px;
+    background-color: rgb(236, 65, 65);
+    cursor: pointer;
+}
+.d{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: rgb(236, 65, 65);
+    margin-left: 12px;
+    margin-top: -7px;
+}
+/*热搜*/
+.hotSearch{
+    position: fixed;
+    top:90px;
+    left:320px;
+    z-index: 15;
+    width: 530px;
+    height: 600px;
+    overflow: scroll;
+    background-color: #fff;
+    box-shadow: 2px 2px 6px grey;
+    border-radius: 15px;
+    display: none;
+}
+.hotSerach,p{
+    font-size: 22px;
+    margin: 30px;
+    color: grey;
+}
+.hotSearch div{
+    padding-top:20px;
+    cursor: pointer;
+    height: 80px;
+}
+.top3{
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(255, 58, 58);
+    margin: 35px;
+}
+.not3{
+    font-size: 20px;
+    color: grey;
+    margin: 35px;
+}
+.detile{
+    margin:10px;
+    margin-left: 90px;
+    font-size: 18px;
+    color: grey;
+}
+.hotName{
+    font-size: 20px;
+    font-weight: 950;
+}
+.hotName2{
+    font-size: 20px;
+}
+.hotNum{
+    color: grey;
+    margin-left: 15px;
+}
+.search::-webkit-input-placeholder{
+    color: rgb(239, 150, 150);;
+}

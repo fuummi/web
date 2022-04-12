@@ -1,0 +1,106 @@
+.banner{
+    position: relative;
+    padding: 0;
+    top: 190px;
+    margin: auto;
+    left:150px;
+    width: 1540px;
+    height: 360px;
+}
+.banner img {
+    position: absolute;
+    transition: 0.65s;
+    cursor: pointer;
+}
+
+.img0 {
+    z-index: 1;
+    left: 0px;
+    top:30px;
+    width: 640px;
+    height: 240px;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.img1 {
+    z-index: 2;
+    top: 0.1px;
+    left: 360px;
+    height: 300px;
+    width: 800px;
+    border-radius: 15px 15px 15px 15px;
+}
+.img2 {
+    z-index: 1;
+    top:30px;
+    left: 900px;
+    width: 640px;
+    height: 240px;
+    border-radius: 15px 15px 15px 15px;
+}
+.img3 {
+    z-index: 0;
+    top:30px;
+    width: 640px;
+    height: 240px;
+    left: 480px;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.banBtn1 {
+    position: absolute;
+    z-index: 4;
+    width: 50px;
+    font-size: 40px;;
+    color: whitesmoke;
+    background-color: rgba(128, 128, 128, 0.486);
+    border-radius: 50%;
+    cursor: pointer;
+    left: 20px;
+    margin-top: 120px;
+    text-align: center;
+}
+.banBtn2 {
+    position: absolute;
+    z-index: 4;
+    width: 50px;
+    font-size: 40px;;
+    color: whitesmoke;
+    background-color: rgba(128, 128, 128, 0.486);
+    border-radius: 50%;
+    cursor: pointer;
+    right: 20px;
+    margin-top: 120px;
+    text-align: center;
+}
+.dot{
+    position: absolute;
+    display: block;
+    top: 310px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dotIn {
+    float: left;
+    display: block;
+    margin: 7px;
+    height: 9px;
+    width: 9px;
+    border: none;
+    background-color: rgb(236, 65, 65);
+    border-radius: 50%;
+}
+ol li {
+    float: left;
+    display: block;
+    margin: 7px;
+    height: 9px;
+    width: 9px;
+    border: none;
+    background-color: rgb(230, 230, 230);
+    border-radius: 50%;
+}
+.none{
+    display: none;
+}

@@ -1,0 +1,60 @@
+$div-color:rgb(140, 233, 240);
+$way:top;
+// @import "./_module"; //引入局部文件
+// $size:100px; //默认变量
+
+
+@mixin border ($way, $width, $style, $color) {
+    //生成边框的函数
+    border-#{$way}: $width $style $color;
+}
+
+.font {
+    font-size: 30px;
+    color: cornflowerblue;
+}
+
+.aa {
+    width: 400px;
+    height: 500px;
+    background-color: $div-color;
+    // border-#{top}: 1px solid #000;
+    @include border ($style:solid, $width:3px, $color:#000, $way:top); //键值对传参就不需要与设置的顺序相同
+    @extend .font;//子元素会自动继承？
+}
+
+.bb+p {
+    //同层相邻选择器
+    color: #000;
+}
+
+.bb~p {
+    //同层全体选择器
+    font-weight: 700;
+}
+
+.dd {
+    border: { //属性嵌套
+        width: 5px;
+        style:solid;
+        color: antiquewhite;
+        left:10px solid #000;
+    }
+}
+
+
+.ee{
+    @extend .dd;
+    background-color: #fff;
+}
+
+.ff{
+    height: 300px;
+}
+.gg{
+    @import "./_module"; //也可以嵌套引入,只在这个花括号中生效
+    @include div-style($bgc:#113) //运用引入的文件中的混合器
+}
+
+/*普通注释*/
+//静默注释

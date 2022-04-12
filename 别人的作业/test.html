@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="module">
+        import tokenizer from "./tokenizer.js"
+        import walk from "./toAst.js"
+        import astToVisualDom from "./astToVisualDom.js"
+        import render from "./render.js"
+        const html = `<h1 id="title" name="hello"><span class="a">hello</span>world</h1>`;
+        function parser(sourceCode) {
+            const tokens = tokenizer(sourceCode);
+            const ast = {
+                type: 'Program',
+                body: [
+                    {
+                        type: 'ExpressionStatement',
+                        expression: walk(tokens),
+                    },
+                ],
+            };
+            return ast;
+        }
+        const ast = parser(html);
+        const visualDom = astToVisualDom(ast);
+        render(visualDom);
+    </script>
+
+</body>
+
+</html>

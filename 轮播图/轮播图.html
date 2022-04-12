@@ -19,11 +19,9 @@
         width: 1200px;
         height: 600px;
     }
-
     img {
         position: absolute;
         top: 150px;
-
         transition: 0.6s;
     }
 
@@ -101,7 +99,7 @@
         margin: 10px;
         height: 22px;
         width: 22px;
-        background-color: grey;
+        background-color: rgb(236, 65, 65);
         border-radius: 50%;
     }
 
@@ -111,7 +109,8 @@
         margin: 10px;
         height: 20px;
         width: 20px;
-        border: 2px solid grey;
+        background-color: rgb(230, 230, 230);
+        border: 2px solid rgb(230, 230, 230);
         border-radius: 50%;
         cursor: pointer;
     }
@@ -227,7 +226,6 @@
             arr1[2].className = ''
             timerNext = setInterval(forTimerNext, 3000)
         }
-
         function forTimerNext() {
             getNext()
             arr.className = 'img3'
@@ -269,7 +267,6 @@
                 //console.log('动');
             }
         }
-        //加入定时器和清除定时器之后如果鼠标频繁快速地进出图片和点击按钮会出现图片切换混乱的情况，造成这种情况的原因是什么呢？
     </script>
 </body>
 </html>

@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "aaxxiioosss": "^1.0.5",
+    "acorn": "^8.7.0",
+    "axios": "^0.26.1",
+    "echarts": "^5.3.2",
+    "events": "^3.3.0",
+    "fs": "^0.0.1-security",
+    "json-server": "^0.17.0",
+    "puppeteer": "^13.5.1",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "express": "^4.17.3",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-middleware": "^5.3.1"
+  }
+}

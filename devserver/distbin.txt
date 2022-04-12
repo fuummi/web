@@ -1,0 +1,38 @@
+const http = require('http');
+const { type } = require('os');
+const webpack = require('webpack')
+const webpackDevMiddleware = require('webpack-dev-middleware') //监听代码是否有变化
+const config = require('./webpack.config.js'); 
+const complier = webpack(config); 
+
+const server = http.createServer()
+server.on('request',function (req, res) {
+    res.end('Hello World');
+})
+
+server.listen(8080,function(){
+    console.log('running......');
+});
+
+fs.readFile(filePathname, (err, data) => {
+        res.writeHead(200);
+        res.write(data);
+    })
+
+
+    let urlObj = url.parse(req.url); //获取请求url,并解析
+    let urlPathname = urlObj.pathname; //获取请求的文件名
+    let filePathname = path.join(__dirname, urlPathname); //和服务器文件的路径拼接,形成请求文件的完整路径
+    if (urlPathname === '/index.html' || urlPathname === '/index.js') {
+        fs.readFile(filePathname, (err, data) => {
+            res.writeHead(200);
+            res.end(data)
+        })
+
+    } else {
+        res.writeHead(404);
+        res.end('404');
+    }
+
+
+

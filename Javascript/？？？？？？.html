@@ -1,0 +1,30 @@
+奉天承运，fufu诏曰：
+
+## LV II
+
+### 题目
+
+现给定两个接口：
+
+#### `POST /homework/auth/login`
+
+- Content-Type: `application/json`
+- Parameters:
+- `username: string`: 用户名
+- `password: string`: 密码
+- Response: text
+
+使用此接口用以登录，用户名使用 `admin`，密码使用 `root`。其返回值为 token。
+
+#### `GET /homework/auth/next_level`
+
+- Response: text
+
+使用此接口用以获取下一等级题目，请求时其请求头中的 `Authorization` 需设为 `BEARER ${token}`，例：`BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnVmdSJ9`.
+
+- 要求：使用题目给定接口获取到下一题的题目，并实现保存登录状态，即重启浏览器后无需再次登录即可正常调用 `/auth/next_level` 接口。
+- 延伸阅读：[JSON Web Token 入门教程](http://www.ruanyifeng.com/blog/2018/07/json_web_token-tutorial.html)
+
+### NEXT LV
+
+见上

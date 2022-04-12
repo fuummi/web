@@ -1,0 +1,24 @@
+myaxios.interceptors.request.use(function aa(config) { //cconfig:需要处理的数据
+    console.log('请求数据处理成功');
+    return config;
+}, function bb(error) {
+    console.log('请求数据处理失败');
+    return Promise.reject(error);
+});
+
+// 响应拦截
+myaxios.interceptors.response.use(function cc(response) {
+    console.log('响应数据处理成功');
+    return response;
+}, function dd(error) {
+    console.log('响应数据处理失败');
+    return Promise.reject(error);
+});
+
+myaxios({
+    method:'get',
+    url: 'http://localhost:3000/posts/1',
+    
+}).then(() => {
+    console.log('外面的.then执行啦');
+})

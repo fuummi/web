@@ -1,0 +1,157 @@
+.searchHeader{
+    position: relative;
+    margin-top: 90px;
+    margin-left: 300px;
+}
+.searchInner{
+    font-size: 35px;
+    font-weight: 900;
+    padding: 50px;
+}
+.swich1{
+    position: absolute;
+    left:40px;
+}
+.playAll{
+    position: absolute;
+    top:80px;
+    width: 200px;
+    height: 40px;
+    padding: 2px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    border-radius: 20px;
+    background-color: rgb(236, 65, 65);
+    cursor: pointer;
+}
+.playAll:hover{
+    background-color: rgb(204, 50, 50);
+}
+.btnn{
+    position: absolute;
+    width: 160px;
+    height: 40px;
+    top:80px;
+    left:220px;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 20px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.btnn:hover{
+    background-color: rgb(242, 242, 242);
+}
+.listHeader{
+    position:absolute;
+    top:300px;
+}
+.listHeader1{
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    color: grey;
+    background-color: rgb(255, 255, 255);
+}
+.listHeader1:hover{
+    background-color: rgb(240, 241, 242);
+}
+.listS{
+    position: absolute;
+    top:355px;
+    left:2px;
+}
+.listItem{
+    position: relative;
+    height: 45px;
+    background-color: rgb(249, 249, 249);
+}
+.listItem:hover{
+    background-color: rgb(240, 241, 242);
+}
+.listItem1{
+    background-color: rgb(255, 255, 255);
+}
+.num{
+    color:rgb(207, 207, 207);
+    font-size: 18px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.mes{
+    position: absolute;
+    font-size: 18px;
+    color:rgb(54, 54, 54);
+    top:10px;
+}
+.running{
+    position: absolute;
+    z-index: 15;
+    top:80px;
+    left:50%;
+    margin-left: -280px;
+    width: 560px;
+    height: 5px;
+    background-color: rgb(205,205,205);
+    cursor: pointer;
+}
+.runningGrey{
+    position: absolute;
+    z-index: 16;
+    top:80px;
+    left:50%;
+    margin-left: -280px;
+    width: 0px;
+    height: 5px;
+    background-color: rgb(255, 78, 78);
+    cursor: pointer;
+}
+.Pdot{
+    position: absolute;
+    top:-6px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(255, 78, 78);
+    cursor: pointer;
+}
+.totalTime{
+    position: absolute;
+    top:70px;
+    left:66%;
+}
+.nowTime{
+    position: absolute;
+    top:70px;
+    left:33%;
+}
+.volum{
+    z-index: 14;
+    float:right;
+    width: 40px;
+    height: 130px;
+    margin-top: -110px;
+    margin-right: 155px;
+    background-color: #fff;
+    box-shadow: 2px 2px 6px grey;
+    display: none;
+}
+.l{
+    width: 7px;
+    height: 100px;
+    margin-left: 15px;
+    margin-top: 10px;
+    background-color: rgb(236, 65, 65);
+    cursor: pointer;
+}
+.d{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: rgb(236, 65, 65);
+    margin-left: 12px;
+    margin-top: -7px;
+}

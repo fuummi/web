@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            font-size: 20px;
+        }
+
+        span {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0px;
+            transition: 2s;
+        }
+
+        .blue {
+            top: 0;
+            background-color: rgb(0, 255, 255);
+        }
+
+        .blueAfter {
+            top: 0;
+            background-color: rgb(0, 255, 255);
+            transform:translate(100px,0) ;
+        }
+
+        .orange {
+            top: 60px;
+            background-color: rgb(255, 140, 0);
+        }
+
+        .orangeAfter {
+            top: 60px;
+            background-color: rgb(255, 140, 0);
+            transform:translate(100px,0) ;
+        }
+
+        .grey {
+            top: 120px;
+            background-color: rgb(112, 128, 144);
+        }
+
+        .greyAfter {
+            top: 120px;
+            background-color: rgb(112, 128, 144);
+            transform:translate(100px,0) ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first">
+        setTimeout定时器嵌套
+        <span class="blue"></span>
+        <span class="orange"></span>
+        <span class="grey"></span>
+    </div>
+    <div class="second">
+        Promise链式回调
+        <span class="blue"></span>
+        <span class="orange"></span>
+        <span class="grey"></span>
+    </div>
+    <div class="third">
+        aysnc await异步队列
+        <span class="blue"></span>
+        <span class="orange"></span>
+        <span class="grey"></span>
+    </div>
+    <script>
+        let blue1 = document.querySelector('.first').querySelector('.blue')
+        let orange1 = document.querySelector('.first').querySelector('.orange')
+        let grey1 = document.querySelector('.first').querySelector('.grey')
+        let blue2 = document.querySelector('.second').querySelector('.blue')
+        let orange2 = document.querySelector('.second').querySelector('.orange')
+        let grey2 = document.querySelector('.second').querySelector('.grey')
+        let blue3 = document.querySelector('.third').querySelector('.blue')
+        let orange3 = document.querySelector('.third').querySelector('.orange')
+        let grey3 = document.querySelector('.third').querySelector('.grey')
+
+        //setTimeout定时器嵌套
+        setTimeout(() => {
+            blue1.className = 'blueAfter';
+            setTimeout(() => {
+                orange1.className = 'orangeAfter';
+                setTimeout(() => {
+                    grey1.className = 'greyAfter';
+                }, 2000);
+            }, 2000);
+        }, 2000);
+
+        //Promise链式回调
+        new Promise((resolve, reject) => {
+            setTimeout(() => {
+                blue2.className = 'blueAfter';
+                resolve()
+            }, 2000);
+        })
+            .then(value => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    orange2.className = 'orangeAfter';
+                    resolve('999')
+                }, 2000);
+            })
+        })
+            .then(value => {
+                setTimeout(() => {
+                    grey2.className = 'greyAfter';
+                }, 2000);
+            })
+        
+        //aysnc await异步队列
+        function blue() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    blue3.className = 'blueAfter';
+                    resolve()
+                }, 2000);
+            })
+        }
+        function orange() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    orange3.className = 'orangeAfter';
+                    resolve()
+                }, 2000);
+            })
+        }
+        function grey() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    grey3.className = 'greyAfter';
+                }, 2000);
+            })
+        }
+        async function run() {
+            await blue()
+            await orange()
+            grey()
+        }
+        run()
+    </script>
+</body>
+
+</html>
+new Promise((resolve, reject) => {
+    document.querySelector('.song').appendChild(songBlock.cloneNode(true))
+    resolve()
+}).then(()=>{
+    document.querySelector('.playCount').innerHTML = data.result[i].playCount
+    document.querySelector('.discribe').innerHTML = data.result[i].name
+})

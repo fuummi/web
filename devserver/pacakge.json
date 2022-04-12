@@ -1,0 +1,21 @@
+{
+    "name": "devserver",
+    "version": "1.0.0",
+    "description": "",
+    "main": "test.js",
+    "mode": "development",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack",
+        "watch": "webpack --watch"
+    },
+    
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "clean-webpack-plugin": "^4.0.0",
+        "html-webpack-plugin": "^5.5.0",
+        "webpack": "^5.72.0",
+        "webpack-cli": "^4.9.2"
+    }
+}

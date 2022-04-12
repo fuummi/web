@@ -1,0 +1,5 @@
+$size:50px !default;
+@mixin div-style ($bgc){
+    height: $size;
+    background-color: $bgc;
+}

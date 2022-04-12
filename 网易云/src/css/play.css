@@ -1,0 +1,352 @@
+*{ padding: 0; margin: 0; border: 0;} 
+.Play{
+    position: relative;
+    background-image: linear-gradient(rgb(214, 204, 217), #fff);
+}
+.playHeader{
+    text-align: center;
+}
+.close{
+    float: left;
+    cursor: pointer;
+}
+.topBtn{
+    float: left;
+    width: 35px;
+    height: 35px;
+    margin-top:25px;
+    text-align: center;
+    font-size: 20px;
+    color:black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.topBtn1{
+    margin-left: 260px;
+    background-color: rgb(207, 198, 209);
+}
+.topBtn2{
+    margin-left: 15px;
+    background-color: rgb(209, 200, 212);
+}
+.search{
+    float: left;
+    height: 50px;
+    width: 240px;
+    margin-top: 20px;
+    margin-left: 20px;
+    outline: none;
+    border-radius: 25px 25px 25px 25px;
+    font-size: 15px;         
+    color: rgb(253, 240, 240);
+    background-color: rgb(207, 197, 209);
+    background-image:url(../images/search11.png);
+    background-repeat: no-repeat;
+    background-position: 15px 12px;
+    background-size: 25px;
+    text-indent: 50px;
+}
+.rightIcon{
+    float: right;
+    margin: 20px;
+    cursor: pointer;
+}
+.disck{
+    position: relative;
+    width: 660px;
+    height: 660px;
+    top:100px;
+    left:10%;
+}
+.part1{
+    z-index: 3;
+    position: absolute;
+    top:10px;
+    left:300px;
+    transition: 1s;
+}
+.part1After{
+    z-index: 3;
+    position: absolute;
+    top:50px;
+    left:262px;
+    transition: 1s;
+    transform: rotate(40deg);
+}
+.part2{
+    position:absolute;
+    z-index: 2;
+    top:130px;
+    left:130px;
+}
+.SongCover{
+    z-index: 1;
+    position: absolute;
+    top:197px;
+    left:197px;
+    width: 266px;
+    height: 266px;
+    border-radius: 50%;
+}
+.songTitle{
+    position: absolute;
+    text-align: center;
+    top:120px;
+    left:50%;
+}
+.songName{
+    font-size: 40px;
+    font-weight: 520;
+}
+.al{
+    font-size: 20px;
+    color: rgb(136, 131, 137);
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 10px;  
+}
+/*滑块*/
+::-webkit-scrollbar-thumb {
+    background-color: rgb(224, 224, 225);
+    border-radius: 5px;
+}
+.playButtom{
+    position: relative;
+    display:block;
+    position:fixed;
+    z-index: 10;
+    bottom: 0%;
+    width: 100%;
+    height: 110px;
+    background-color: rgb(255, 255, 255);
+    border-top: solid 2px rgb(225, 225, 225);
+}
+.littleCover{
+    position: absolute;
+    margin: 16px;
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+}
+.playTitle{
+    position: absolute;
+    top:20px;
+    left:105px;
+    font-size: 25px;
+    color: rgb(51, 51, 51);
+}
+.playSinger{
+    position: absolute;
+    top:58px;
+    left:105px;
+    font-size: 18px;
+}
+.bottomIcons{
+    position: absolute;
+    top: 23px;
+    right: 20px;
+}
+.bottomIcons:hover{
+    cursor: pointer;
+}
+.btns{
+    position: absolute;
+    left:50%;
+    margin-left: -195px;
+    top:8px;
+}
+.btns img{
+    margin-right: 50px;
+    cursor: pointer;
+}
+.Icons{
+   margin-top:-80px;
+   margin-left: 165px;
+}
+.icons img{
+   margin-right: 20px;
+}
+.Ccomment{
+    position: absolute;
+    top:750px;
+    left:50%;
+    margin-left: -475px;
+    height: 5000px;
+    width: 950px;
+}
+.cNum{
+    font-size: 20px;
+    font-weight: 900;
+    margin: 30px;
+}
+.Chead{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 30px;
+}
+.Ccomments{
+    margin-top: 60px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(242, 242, 242);
+}
+.Ctext{
+    margin-top:-55px;
+    margin-left:100px;
+}
+.Cinner{
+    font-size: 18px;
+    width: 800px;
+}
+.Ctime{
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom:-15px;
+}
+.Cright{
+    margin-top:-50px;
+    margin-left:600px;
+}
+.running{
+    position: absolute;
+    z-index: 15;
+    top:80px;
+    left:50%;
+    margin-left: -280px;
+    width: 560px;
+    height: 5px;
+    background-color: rgb(205,205,205);
+    cursor: pointer;
+}
+.runningGrey{
+    position: absolute;
+    z-index: 16;
+    top:80px;
+    left:50%;
+    margin-left: -280px;
+    width: 0px;
+    height: 5px;
+    background-color: rgb(255, 78, 78);
+    cursor: pointer;
+}
+.Pdot{
+    position: absolute;
+    top:-6px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(255, 78, 78);
+    cursor: pointer;
+}
+.totalTime{
+    position: absolute;
+    top:70px;
+    left:66%;
+}
+.nowTime{
+    position: absolute;
+    top:70px;
+    left:33%;
+}
+.volum{
+    z-index: 14;
+    float:right;
+    width: 40px;
+    height: 130px;
+    margin-top: -205px;
+    margin-right: 155px;
+    background-color: #fff;
+    box-shadow: 2px 2px 6px grey;
+    display: none;
+}
+.l{
+    width: 7px;
+    height: 100px;
+    margin-left: 15px;
+    margin-top: 10px;
+    background-color: rgb(236, 65, 65);
+    cursor: pointer;
+}
+.d{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: rgb(236, 65, 65);
+    margin-left: 12px;
+    margin-top: -5px;
+}
+.hotSearch{
+    position: fixed;
+    top:90px;
+    left:320px;
+    z-index: 15;
+    width: 530px;
+    height: 600px;
+    overflow: scroll;
+    background-color: #fff;
+    box-shadow: 2px 2px 6px grey;
+    border-radius: 15px;
+    display: none;
+}
+.hotSerach,p{
+    font-size: 22px;
+    margin: 30px;
+    color: grey;
+}
+.hotSearch div{
+    padding-top:20px;
+    cursor: pointer;
+    height: 80px;
+}
+.top3{
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(255, 58, 58);
+    margin: 35px;
+}
+.not3{
+    font-size: 20px;
+    color: grey;
+    margin: 35px;
+}
+.detile{
+    margin:10px;
+    margin-left: 90px;
+    font-size: 18px;
+    color: grey;
+}
+.hotName{
+    font-size: 20px;
+    font-weight: 950;
+}
+.hotName2{
+    font-size: 20px;
+}
+.hotNum{
+    color: grey;
+    margin-left: 15px;
+}
+.lyric{
+    position: absolute;
+    width: 650px;
+    text-align: center;
+    top:270px;
+    right:18%;
+    height: 310px;
+    font-size: 22px;
+    line-height: 60px;
+    overflow: scroll;
+    padding-top:170px;
+    transition: 1s;
+}
+.lyout{
+    font-size: 18px;
+    color: rgb(96, 98, 99);
+}
+.lyin{
+    font-size: 25px;
+    font-weight: 800;
+    color: black;
+}

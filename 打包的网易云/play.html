@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>播放</title>
+<script defer src="/dist/js/index.js"></script>
+<script defer src="/dist/js/nowplay.js"></script>
+<script defer src="/dist/js/play.js"></script>
+<script defer src="/dist/js/plays.js"></script>
+<script defer src="/dist/js/search.js"></script>
+<script defer src="/dist/js/test.js"></script>
+</head>
+<body>
+    <div class="Play">
+        <div class="playHeader">
+            <img src="/dist/images/playClose.png" class="close">
+            <div class="topBtn topBtn1">&lt</div>
+            <div class="topBtn topBtn2">&gt</div>
+            <input type="text" class="search">
+            <img src="/dist/images/mic11.png" style="cursor: pointer; margin-left: -550px;">
+            <div class="rightIcon">
+                <img src="/dist/images/playtopicon1.png">
+                <img src="/dist/images/playtopicon_01.gif">
+                <img src="/dist/images/playtopicon_02.gif">
+                <img src="/dist/images/playtopicon_03.gif">
+                <img src="/dist/images/playtopicon_04.gif">
+                <img src="/dist/images/playtopicon_05.gif">
+                <img src="/dist/images/playtopicon_06.gif">
+            </div>
+            <div class="disck">
+                <img src="/dist/images/part1.png" class="part1">
+                <img src="/dist/images/part2.png" class="part2">
+                <img class="SongCover">
+                <canvas></canvas>
+            </div>
+            <div class="songTitle">
+                <div class="songName"></div>
+                <div class="al"></div>
+            </div>
+            <div class="lyric"></div>
+        </div>
+        <div class="Ccomment">
+            <div class="cNum"></div>
+            <div class="Ccomments"  >
+                <img class="Chead">
+                <div class="Ctext">
+                    <div class="Cinner"> <a href="#"></a> <span class="inner"></span>
+                    </div>
+                    <p class="Ctime"></p>
+                    <span class="Cright"><img src="/dist/images/good.png"> <span style="color: grey;"></span>  <img src="/dist/images/good2.png"></span>
+                </div>
+            </div>
+        </div>
+        <div class="playButtom">
+            <img src="/dist/images/playbottom1.png">
+            <div class="icons">
+                <img src="/dist/images/playbottom00.png">
+                <img src="/dist/images/playbottom10.png">
+                <img src="/dist/images/playbottom20.png">
+                <img src="/dist/images/playbottom30.png">
+            </div>
+            <div class="btns">
+                <img src="/dist/images/play0.png">
+                <img src="/dist/images/play1.png" class="preSong">
+                <img src="/dist/images/play2.png" class="playSong">
+                <img src="/dist/images/play3.png" class="nextSong">
+                <img src="/dist/images/play4.png">
+            </div>
+            <div class="bottomIcons">
+                <img src="/dist/images/bottomicon_01.gif">
+                <img src="/dist/images/bottomicon_02.gif">
+                <img src="/dist/images/bottomicon_03.gif" class="volumBtn">
+                <img src="/dist/images/bottomicon_04.gif">
+                <img src="/dist/images/bottomicon_05.gif" class="nowBtn">
+            </div>
+            <span class="nowTime"></span>
+            <div class="runningGrey"></div>
+            <div class="running">
+                <div class="Pdot PdotAfter"></div>
+            </div>
+            <span class="totalTime"></span>
+            <audio class="audio"> </audio>
+            <div class="volum">
+                <div class="l"></div>
+                <div class="d"></div>
+            </div>
+            <div class="nowPlayList" style="margin-top: -750px;">
+                <div style="margin: 20px; font-size: 29px;font-weight: 900;color: rgb(55, 55, 55);">当前播放</div>
+                <div class="nowPlayTotal">总111首</div>
+                <div class="clearNowPlay">清空列表</div>
+                <div class="NlistItem" id="remove">
+                    <span class="Ntitle" >标题</span>
+                    <span class="Nsinger" >歌手</span>
+                    <span class="Ntime" >时间</span>
+                </div>
+                <div class="NlistItem NlistItem1" id="remove">
+                    <span class="Ntitle" >标题</span>
+                    <span class="Nsinger" >歌手</span>
+                    <span class="Ntime" >时间</span>
+                </div>
+            </div>
+        </div>
+        <!--热搜榜-->
+    <div class="hotSearch">
+        <p>热搜榜</p>
+        <div>
+            <span class="top3">1</span>
+            <span class="hotName">11</span>
+            <span class="hotNum">11</span>
+            <img class="hotIcon">
+            <p class="detile"></p>
+        </div>
+        <div>
+            <span class="top3">2</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+            <p class="detile"></p>
+        </div>
+        <div>
+            <span class="top3">3</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+            <p class="detile"></p>
+        </div>
+        <div>
+            <span class="not3">4</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+            <p class="detile"></p>
+        </div>
+        <div>
+            <span class="not3">5</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">6</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+            <p class="detile"></p>
+        </div>
+        <div>
+            <span class="not3">7</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+            <p class="detile"></p>
+        </div>
+        <div>
+            <span class="not3">8</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+            <p class="detile"></p>
+        </div>
+        <div>
+            <span class="not3">9</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+            <p class="detile"></p>
+        </div>
+        <div>
+            <span class="not3">10</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">11</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">12</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">13</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">14</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">15</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">16</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">17</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">18</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">19</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+        <div>
+            <span class="not3">20</span>
+            <span class="hotName"></span>
+            <span class="hotNum"></span>
+            <img class="hotIcon">
+        </div>
+    </div>
+    </div>
+</body>
+</html>
